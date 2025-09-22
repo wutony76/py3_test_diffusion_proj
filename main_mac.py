@@ -27,7 +27,7 @@ def main():
     prompt = args.prompt
     image = pipe(prompt,num_inference_steps= args.steps, guidance_scale=7.5).images[0]
 
-    file =f"P-{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.png"
+    file =f"output/P-{datetime.datetime.now().strftime('%Y%m%d%H%M%S')}.png"
     out_path = Path(file)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     image.save(out_path)
