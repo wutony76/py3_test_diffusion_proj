@@ -4,6 +4,23 @@
 
 ---
 
+## 目錄
+
+- [環境準備](#環境準備)
+  - [建立虛擬環境](#建立虛擬環境)
+  - [啟動虛擬環境](#啟動虛擬環境)
+- [安裝必要套件](#安裝必要套件)
+  - [PyTorch（依裝置選擇其一）](#pytorch依裝置選擇其一)
+  - [Diffusers 與相關套件](#diffusers-與相關套件)
+- [使用方式](#使用方式)
+  - [方式 A：macOS 快速腳本（main_mac.py）](#方式-a-macos-快速腳本main_macpy)
+  - [方式 B：跨平台 CLI（sd_generate.py）](#方式-b跨平台-clisd_generatepy)
+  - [參數一覽（sd_generate.py）](#參數一覽sd_generatepy)
+- [macOS 使用者小提示（MPS 回退）](#macos-使用者小提示mps-回退)
+- [離開虛擬環境](#離開虛擬環境)
+
+---
+
 ## 環境準備
 
 ### 建立虛擬環境
@@ -36,7 +53,7 @@ selfenv\Scripts\activate
 pip install -U pip
 ```
 
-### 1) PyTorch（依裝置選擇其一）
+### PyTorch（依裝置選擇其一）
 
 - NVIDIA CUDA（範例使用 CUDA 11.8）：
 
@@ -50,7 +67,7 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 pip install torch torchvision torchaudio
 ```
 
-### 2) Diffusers 與相關套件
+### Diffusers 與相關套件
 
 ```bash
 pip install diffusers transformers safetensors
@@ -115,6 +132,14 @@ python sd_generate.py \
 ```
 
 首次執行會自動下載模型權重，依網路速度與磁碟空間而定。
+
+### 參數一覽（`sd_generate.py`）
+
+- **--prompt**：文字提示（必填）。
+- **--steps**：推理步數。數值越高，畫面越細緻，但生成時間越久。
+- **--guidance**：CFG Scale。數值越高越貼近提示，但可能降低多樣性。
+- **--model**：模型路徑或 Hugging Face Hub 模型 ID（如 `runwayml/stable-diffusion-v1-5`）。
+- **--out**：輸出檔案路徑與檔名（如 `outputs/portrait.png`）。
 
 ---
 
