@@ -172,5 +172,5 @@ https://civitai.com/models/6424?modelVersionId=9474
 ## TEST.USE ChilloutMix 專用 Prompt
 
 ```bash
-selfenv/bin/python main_mac.py --prompt "(ultra-detailed, masterpiece), confident asian woman, disco outfit, short skirt with sequins, crop top with cutouts, pink neon lights, disco ball reflections, nightclub background, cinematic lighting, glossy skin, professional photography" --steps 500
+selfenv/bin/python main_mac.py --prompt "Ultra-realistic 4K close-up portrait of a 25-35 year-old Korean woman, seductive smile, alluring deep eyes, soft parted lips, elegant updo with creative bun, delicate strands framing face. Wearing a sexy cut-out designer dress accentuating her curves, waist, shoulders, and décolleté. Sparkling diamond dinosaur necklace prominently featured, glamorous matching earrings. Slightly provocative yet elegant pose, glowing smooth skin with blush, soft studio lighting, colorful reflective blurred background, warm caramel and cream tones, metallic highlights, mesmerizing and luxurious atmosphere." --steps 25
 ```
