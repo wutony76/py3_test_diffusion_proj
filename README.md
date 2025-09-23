@@ -158,3 +158,19 @@ export PYTORCH_ENABLE_MPS_FALLBACK=1
 ```bash
 deactivate
 ```
+
+---
+
+---
+
+## ChilloutMix Model Download
+
+```
+https://civitai.com/models/6424?modelVersionId=9474
+```
+
+## TEST.USE ChilloutMix 專用 Prompt
+
+```bash
+selfenv/bin/python main_mac.py --prompt "(ultra-detailed, masterpiece), confident asian woman, disco outfit, short skirt with sequins, crop top with cutouts, pink neon lights, disco ball reflections, nightclub background, cinematic lighting, glossy skin, professional photography" --steps 500
+```
